@@ -1,0 +1,87 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling during animation */
+    background-color: #fbfafb;
+}
+
+/* Welcome Screen Styling */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #13111c, #27241f, #78668f, #602792, #0d0116);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 3em;
+}
+
+/* Dynamic gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Welcome Text Styling */
+#welcome-text {
+    display: inline-flex;
+    align-items: center; /* Align logo with text */
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px); /* Start above final position */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Drop animation for the logo */
+@keyframes dropIn {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: translateY(-200px); /* Start far above */
+    }
+    80% {
+        opacity: 1; /* Fade in */
+        transform: translateY(20px); /* Overshoot the final position */
+    }
+    100% {
+        transform: translateY(0); /* Settle at final position */
+    }
+}
+
+#welcome-text img {
+    margin-left: 20px; /* Space between text and logo */
+    height: 200px; /* Adjust as needed */
+    width: auto;
+    opacity: 0; /* Start invisible */
+    animation: dropIn 1s ease-out forwards; /* Apply drop animation */
+    animation-delay: 1s; /* Delay to sync with text animation */
+    transition: opacity 0.5s ease;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    display: none;
+}

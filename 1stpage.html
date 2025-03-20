@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rentify Login Options</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           background: linear-gradient(45deg, #13111c, #27241f, #78668f, #602792, #0d0116);
+        }
+
+
+       .logo {
+           text-align: center;
+           margin-bottom: 20px;
+       }
+
+
+       .logo img {
+           width: 500px;
+           height: auto;
+       }
+
+
+       .container {
+           text-align: center;
+       }
+
+
+       .container h1 {
+           font-size: 3rem;
+           color: #9398c3;
+           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+           margin-bottom: 10px;
+       }
+
+
+       .container p {
+           font-size: 1.2rem;
+           color: #b7b1cb;
+           margin-bottom: 20px;
+       }
+
+
+       .options {
+           display: flex;
+           gap: 20px;
+           margin-top: 20px;
+           justify-content: center;
+           
+       }
+
+
+       .option {
+           background-color: #695293;
+           border: 2px solid #6e6bbb;
+           border-radius: 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           
+           
+           cursor: pointer;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
+
+
+       .option:hover {
+           transform: scale(1.05);
+           box-shadow: 0 6px 12px rgba(26, 4, 4, 0.3);
+       }
+
+
+       .option img {
+           width: 200px;
+           height: auto;
+           margin-bottom: 10px;
+       }
+
+
+       .option h3 {
+           color: #9894b2;
+           font-size: 18px;
+           margin: 0;
+       }
+   </style>
+</head>
+<body>
+   <div class="logo">
+       <img src="rentify logo.png" alt="Rentify Logo">
+   </div>
+   <div class="container">
+       <h1>Welcome to Rentify</h1>
+       <p>Select an option to continue:</p>
+
+
+       <div class="options">
+           <div class="option" onclick="location.href='house/home.html'">
+               <img src="house-img-1.webp" alt="Rent a House">
+               <h3>Home</h3>
+           </div>
+           <div class="option" onclick="location.href='bike/home.html'">
+               <img src="bike/images/cycle.jpg" alt="Rent a Two-Wheeler">
+               <h3>vehicles</h3>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+
